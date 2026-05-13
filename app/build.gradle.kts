@@ -26,6 +26,10 @@ android {
     }
 
     buildTypes {
+        debug {
+            buildConfigField("String", "BASE_URL", "\"https://oursongapp.com/api/\"")
+        }
+
         release {
             isMinifyEnabled = false
             proguardFiles(
@@ -40,6 +44,7 @@ android {
     }
     buildFeatures {
         compose = true
+        android.buildFeatures.buildConfig = true
     }
 }
 
